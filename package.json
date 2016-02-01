@@ -1,0 +1,29 @@
+{
+  "name": "druid-dm",
+  "version": "0.1.0",
+  "description": "Druid-dm watches over the dependencies of your Node.js projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevin-smets/druid-dm.git"
+  },
+  "keywords": [
+    "dependency",
+    "reporter",
+    "manager",
+    "ui"
+  ],
+  "author": "Kevin Smets",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevin-smets/druid-dm/issues"
+  },
+  "homepage": "https://github.com/kevin-smets/druid-dm#readme",
+  "dependencies": {
+    "dep-rep": "^0.5.2",
+    "druids": "^0.1.2"
+  }
+}
