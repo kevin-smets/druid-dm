@@ -1,0 +1,23 @@
+<!--Loader-->
+<div ng-hide="loaded" layout="row" layout-sm="column" layout-align="space-around">
+  <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+</div>
+
+<!--Content-->
+<div ng-repeat="dependency in dependencies" ng-show="loaded">
+  <div layout="row" layout-xs="column" layout-padding layout-align="center center">
+    <div flex>
+      {{dependency.name}}
+    </div>
+    <div flex>
+      {{dependency.from}}
+    </div>
+    <div flex>
+      {{dependency.to}}
+    </div>
+    <div flex>
+      {{dependency.satisfied}}
+    </div>
+  </div>
+  <md-divider ng-if="!$last"></md-divider>
+</div>

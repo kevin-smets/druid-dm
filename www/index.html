@@ -1,51 +1,39 @@
 <html lang="en">
 <head>
+  <base href="/">
   <style>
-    [ng-cloak]{
+    [ng-cloak] {
       display: none;
+    }
+
+    [ng-click] {
+      cursor: pointer;
+    }
+
+    [ng-click]:hover {
+      background-color: #efefef;
     }
   </style>
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
 </head>
 <body ng-app="druid-dm" ng-cloak>
 
-<div ng-controller="AppCtrl" layout="column" ng-cloak>
+<div layout="column">
   <md-toolbar class="md-theme-light">
     <div class="md-toolbar-tools">
       <h2 class="md-flex">Druid DM</h2>
     </div>
   </md-toolbar>
   <md-content>
-    <!--Loader-->
-    <div ng-hide="loaded" layout="row" layout-sm="column" layout-align="space-around">
-      <md-progress-circular md-mode="indeterminate"></md-progress-circular>
-    </div>
-
-    <!--Content-->
-    <div ng-repeat="dependency in dependencies" ng-show="loaded">
-      <div layout="row" layout-xs="column" layout-padding layout-align="center center">
-        <div flex>
-          {{dependency.name}}
-        </div>
-        <div flex>
-          {{dependency.from}}
-        </div>
-        <div flex>
-          {{dependency.to}}
-        </div>
-        <div flex>
-          {{dependency.satisfied}}
-        </div>
-      </div>
-      <md-divider ng-if="!$last"></md-divider>
-    </div>
+    <div data-ng-view></div>
   </md-content>
 </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-aria.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-messages.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-messages.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
 
 <!-- Your application bootstrap  -->
@@ -53,9 +41,11 @@
   /**
    * You must include the dependency on 'ngMaterial'
    */
-  var app = angular.module('druid-dm', ['ngMaterial']);
+  var app = angular.module('druid-dm', ['ngMaterial', 'ngRoute']);
 </script>
-<script src="scripts/list.js"></script>
+<script src="scripts/config.js"></script>
+<script src="scripts/local.js"></script>
+<script src="scripts/locals.js"></script>
 
 </body>
 </html>

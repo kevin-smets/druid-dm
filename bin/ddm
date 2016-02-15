@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+'use strict';
+
+var argv = require('yargs').argv;
+
+require('../lib/druid-dm').serve({
+    port: argv.p || argv.port,
+    port: argv.druidsPort
+});

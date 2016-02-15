@@ -1,0 +1,14 @@
+<!--Loader-->
+<div ng-hide="loaded" layout="row" layout-sm="column" layout-align="space-around">
+  <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+</div>
+
+<!--Content-->
+<div ng-repeat="local in locals" ng-show="loaded">
+  <div layout="row" layout-xs="column" layout-padding layout-align="center center" ng-click="viewDetail(local)">
+    <div flex>
+      {{local}}
+    </div>
+  </div>
+  <md-divider ng-if="!$last"></md-divider>
+</div>
