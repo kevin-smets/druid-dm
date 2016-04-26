@@ -17,5 +17,3 @@ app.controller('localsController', function ($scope, $http, $location) {
     console.error(response);
   });
 });
-
-

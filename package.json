@@ -4,7 +4,7 @@
   "description": "Druid-dm watches over the dependencies of your Node.js projects",
   "main": "index.js",
   "scripts": {
-    "ddm": "bin/ddm"
+    "start": "bin/ddm"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/kevin-smets/druid-dm#readme",
   "dependencies": {
-    "druids": "0.2.0",
+    "druids": "0.2.2",
     "express": "4.13.4",
-    "yargs": "^4.1.0"
+    "yargs": "4.6.0"
   }
 }
