@@ -1,6 +1,6 @@
 {
   "name": "druid-dm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Druid-dm watches over the dependencies of your Node.js projects",
   "main": "index.js",
   "scripts": {
