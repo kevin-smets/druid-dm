@@ -3,8 +3,11 @@
   "version": "0.1.1",
   "description": "Druid-dm watches over the dependencies of your Node.js projects",
   "main": "index.js",
+  "bin": {
+    "ddm": "bin/ddm.js"
+  },
   "scripts": {
-    "start": "bin/ddm"
+    "start": "bin/ddm.js"
   },
   "repository": {
     "type": "git",
@@ -23,8 +26,8 @@
   },
   "homepage": "https://github.com/kevin-smets/druid-dm#readme",
   "dependencies": {
-    "druids": "0.2.2",
-    "express": "4.13.4",
+    "dep-rep": "^0.6.3",
+    "express": "^4.13.4",
     "yargs": "^4.7.1"
   }
 }
